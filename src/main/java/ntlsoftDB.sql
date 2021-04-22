@@ -78,7 +78,7 @@ title = '제목6',
 `body` = '본문6';
 
 /*
-## 게시물 대량 생성 추가
+## 게시물 대량 생성 추
 INSERT INTO article
 (regDate, updateDate, memberId, title, `body`)
 SELECT NOW(), NOW(), FLOOR(RAND() * 2) + 1, CONCAT('제목_', FLOOR(RAND() * 1000) + 1), CONCAT('내용_', FLOOR(RAND() * 1000) + 1)
