@@ -4,7 +4,6 @@
 
 <%@ include file="../common/head.jspf"%>
 
-
 <!-- MAIN INFORMATION START-->
 <section class="main__information">
 	<div class="container"></div>
