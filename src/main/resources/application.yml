@@ -1,6 +1,17 @@
 server:
   port: 8024
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: brad0135@gmail.com
+    password: mqscqrlrqxchxhih
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   servlet:
     multipart:
       max-file-size: 50MB
@@ -17,6 +28,10 @@ spring:
 mybatis:
   type-aliases-package: com.ntlsoft.dto
 custom:
+  siteMainUri: http://localhost:8024/
+  siteName: NTLsoft
+  emailFrom: no-reply@localhost
+  emailFromName: NTL-soft manager
   genFileDirPath: C:/work/com.ntlsoft-file
   logging:
     dir: log

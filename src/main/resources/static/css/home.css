@@ -85,7 +85,7 @@ header .logo__container li a {
 header .image {
 	width: var(- -navbar_fontsize);
 	height: var(- -navbar_fontsize);
-	background-image: url("/image/logo__NTL-white.png");
+	background-image: url("../resource/image/logo__NTL-white.png");
 	background-size: cover;
 	background-position: center;
 	text-indent: -9999px;
@@ -132,7 +132,7 @@ header .logo__container li a:hover {
 	display: none;
 	width: 18px;
 	height: 24px;
-	background-image: url("/image/toggle-btn.svg");
+	background-image: url("../image/toggle-btn.svg");
 	cursor: pointer;
 	text-indent: -9999px;
 	position: absolute;
@@ -150,7 +150,7 @@ header.sticky #toggle_btn {
 	position: relative;
 	width: 100%;
 	height: 45vh;
-	background-image: url("/image/subpage_bg.jpg");
+	background-image: url("../image/subpage_bg.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -242,19 +242,19 @@ header.sticky #toggle_btn {
 }
 
 .product__item.item1 {
-	background-image: url(/image/architecture-1857175_1920.jpg);
+	background-image: url("../image/item1.jpg");
 }
 
 .product__item.item2 {
-	background-image: url(/image/architecture-2804083.jpg);
+	background-image: url("../image/item3.jpg");
 }
 
 .product__item.item3 {
-	background-image: url(/image/archive-1850170_1920.jpg);
+	background-image: url("../image/item3.jpg");
 }
 
 .product__item.item4 {
-	background-image: url(/image/computer-2982270_1920.jpg);
+	background-image: url("../image/item4.jpg");
 }
 
 .product__container h3 {
