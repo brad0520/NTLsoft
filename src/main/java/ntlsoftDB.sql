@@ -77,14 +77,6 @@ memberId = 2,
 title = '제목6',
 `body` = '본문6';
 
-/*
-## 게시물 대량 생성 추
-INSERT INTO article
-(regDate, updateDate, memberId, title, `body`)
-SELECT NOW(), NOW(), FLOOR(RAND() * 2) + 1, CONCAT('제목_', FLOOR(RAND() * 1000) + 1), CONCAT('내용_', FLOOR(RAND() * 1000) + 1)
-FROM article;
-*/
-
 # 게시판 테이블 생성
 CREATE TABLE board (
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '번호',
@@ -117,6 +109,13 @@ updateDate = NOW(),
 `name` = 'FREE',
 `code` = 'free';
 
+## QNA 게시판 생성
+INSERT INTO board
+SET regDate = NOW(),
+updateDate = NOW(),
+`name` = 'QNA',
+`code` = 'QNA';
+
 # 회원 테이블 생성
 CREATE TABLE `member` (
     id INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '번호',
@@ -139,8 +138,8 @@ SET regDate = NOW(),
 updateDate = NOW(),
 loginId = 'user1',
 loginPw = 'user1',
-`name` = '유저1이름',
-nickname = '유저1별명',
+`name` = 'user1',
+nickname = 'user1',
 email = 'brad0135@gmail.com',
 cellphoneNo = '01012341234';
 
@@ -151,8 +150,8 @@ SET regDate = NOW(),
 updateDate = NOW(),
 loginId = 'user2',
 loginPw = 'user2',
-`name` = '유저2이름',
-nickname = '유저2별명',
+`name` = 'user2',
+nickname = 'user2',
 email = 'brad0135@gmail.com',
 cellphoneNo = '01012341234';
 
@@ -163,12 +162,31 @@ SET regDate = NOW(),
 updateDate = NOW(),
 loginId = 'user3',
 loginPw = 'user3',
-`name` = '유저3이름',
-nickname = '유저3별명',
+`name` = 'user3',
+nickname = 'user3',
 email = 'brad0135@gmail.com',
 cellphoneNo = '01012341234';
 
 
+# 기존 회원의 비밀번호를 암호화 해서 저장
+UPDATE `member`
+SET loginPw = SHA2(loginPw, 256);
+
+SELECT * FROM `member`;
+
+# 게시물 대량 생성
+INSERT INTO article
+(regDate, updateDate, boardId, memberId, title, `body`)
+SELECT NOW(),
+NOW(),
+FLOOR(RAND() * 3) + 1,
+FLOOR(RAND() * 3) + 1,
+CONCAT('제목_', FLOOR(RAND() * 1000) + 1),
+CONCAT('내용_', FLOOR(RAND() * 1000) + 1)
+FROM article;
+
+SELECT * FROM article;
+SELECT * FROM `member`;
 
 -- # 댓글 테이블 추가
 -- CREATE TABLE reply (
@@ -265,14 +283,3 @@ cellphoneNo = '01012341234';
 -- SET authLevel = 7
 -- WHERE id = 1;
 
-/*
-INSERT INTO article
-(regDate, updateDate, memberId, title, `body`, boardId)
-SELECT NOW(),
-NOW(),
-FLOOR(RAND() * 2) + 1,
-CONCAT('제목_', FLOOR(RAND() * 1000) + 1),
-CONCAT('내용_', FLOOR(RAND() * 1000) + 1),
-FLOOR(RAND() * 2) + 1
-FROM article;
-*/

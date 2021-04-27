@@ -36,10 +36,13 @@
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 
+<!-- daisyui 불러오기 -->
+<!-- <link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/daisyui@0.14.4/dist/full.css"> -->
+
 <!-- font -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
 	rel="stylesheet">
 
 <!-- CSS 초기화 main.css보다 먼저 선언-->
@@ -53,7 +56,17 @@
 
 <!-- JAVASCRIPT LINK -->
 <script defer src="navbar.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<!-- 폰트어썸 불러오기 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+<!-- 제이쿼리 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- vue -->
+<script src="https://unpkg.com/vue@next"></script>
 
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -69,22 +82,38 @@
 				<!-- MENU GROUP -->
 				<div class="menu-group float--left">
 					<div class="logo">
-						<a href="#">NTL</a>
+						<a href="../home/main">NTL</a>
 					</div>
 					<ul class="main-menu toggle">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Web Service</a></li>
-						<li><a href="#">Shopping Mall</a></li>
-						<li><a href="#">Notice</a></li>
-						<li><a href="#">Board</a></li>
-						<li><a href="#">QnA</a></li>
+						<li><a href="../home/main">About</a></li>
+						<li><a href="../home/main">Web Service</a></li>
+						<li><a href="../home/main">Shopping Mall</a></li>
+						<li><a href="../article/list?boardId=1">Notice</a></li>
+						<li><a href="../article/list?boardId=2">Board</a></li>
+						<li><a href="../article/list?boardId=3">QnA</a></li>
 					</ul>
 				</div>
 				<!-- SIGN GROUP -->
 				<div class="sign-group float--right toggle">
 					<div class="btn-group">
-						<a href="/mpaUsr/member/login" class="btn sign-in">Log in</a> 
-						<a href="/mpaUsr/member/join"	class="btn sign-in">Sign up</a>
+						<c:if test="${rq.isLogined()}">
+						<li>
+							<a href="../member/doLogout" class="btn sign-in">LOGOUT</a>
+						</li>
+					    <li>
+                            <a href="../member/mypage" class="btn sign-in">${rq.loginedMember.nickname}'s PAGE</a>
+                        </li>
+						</c:if>
+						
+						<c:if test="${rq.notLogined}">
+                        <li>
+                            <a href="${rq.loginPageUri}" class="btn sign-in">Log in</a> 
+                        </li>
+                        <li>
+                            <a href="../member/join" class="btn sign-in">Sign up</a>
+                        </li>
+                        </c:if>
+
 					</div>
 				</div>
 

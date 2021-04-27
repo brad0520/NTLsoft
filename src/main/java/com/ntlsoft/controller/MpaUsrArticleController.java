@@ -77,7 +77,7 @@ public class MpaUsrArticleController {
     public String showList(HttpServletRequest req, @RequestParam(defaultValue = "1") int boardId, String searchKeywordType, String searchKeyword,
                            @RequestParam(defaultValue = "1") int page) {
         // 조회 요청받은 게시판 조회 
-    	Board board = articleService.getBoardById(boardId);
+    	Board board = boardService.getBoardById(boardId);
 
         if (Util.isEmpty(searchKeywordType)) {
             searchKeywordType = "titleAndBody";
