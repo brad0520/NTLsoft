@@ -7,28 +7,84 @@ import org.springframework.stereotype.Service;
 
 import com.ntlsoft.dao.ArticleDao;
 import com.ntlsoft.dto.Article;
+import com.ntlsoft.dto.Board;
+import com.ntlsoft.dto.ResultData;
 
 @Service
 public class ArticleService {
 	@Autowired
 	private ArticleDao articleDao;
-	
-	
-	public int getArticlesTotalCount(int boardId, String searchKeywordtype, String searchKeyword) {
+
+	public ResultData modifyArticle(int id, String title, String body) {
+		Article article = getArticleById(id);
+
+		if (isEmpty(article)) {
+			return new ResultData("F-1", "존재하지 않는 게시물 번호입니다.", "id", id);
+		}
+
+		articleDao.modifyArticle(id, title, body);
+
+		return new ResultData("S-1", "게시물이 수정되었습니다.", "id", id);
+	}
+
+	private boolean isEmpty(Article article) {
+		if (article == null) {
+			return true;
+		} else if (article.isDelStatus()) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public ResultData deleteArticleById(int id) {
+		Article article = getArticleById(id);
+
+		if (isEmpty(article)) {
+			return new ResultData("F-1", "게시물이 존재하지 않습니다.", "id", id);
+		}
+
+		articleDao.deleteArticleById(id);
+
+		return new ResultData("S-1", id + "번 게시물이 삭제되었습니다.", "id", id, "boardId", article.getBoardId());
+	}
+
+	public ResultData writeArticle(int boardId, int memberId, String title, String body) {
+		articleDao.writeArticle(boardId, memberId, title, body);
+		int id = articleDao.getLastInsertId();
+
+		return new ResultData("S-1", "게시물이 작성되었습니다.", "id", id);
+	}
+
+	public Article getArticleById(int id) {
+		return articleDao.getArticleById(id);
+	}
+
+	public Board getBoardById(int id) {
+		return articleDao.getBoardById(id);
+	}
+
+	public int getArticlesTotalCount(int boardId, String searchKeywordTypeCode, String searchKeyword) {
 		if (searchKeyword != null && searchKeyword.length() == 0) {
 			searchKeyword = null;
 		}
-		
-		return articleDao.getArticlesTotalCount(boardId, searchKeywordtype, searchKeyword);
+
+		return articleDao.getArticlesTotalCount(boardId, searchKeywordTypeCode, searchKeyword);
 	}
 
-	public List<Article> getForPrintArticles(int boardId, String searchKeywordtype, String searchKeyword,
+	public List<Article> getForPrintArticles(int boardId, String searchKeywordTypeCode, String searchKeyword,
 			int itemsCountInAPage, int page) {
-		
-		int limitForm = (page - 1) * itemsCountInAPage;
+		if (searchKeyword != null && searchKeyword.length() == 0) {
+			searchKeyword = null;
+		}
+
+		int limitFrom = (page - 1) * itemsCountInAPage;
 		int limitTake = itemsCountInAPage;
-		
-		return articleDao.getForPrintArticles(boardId, searchKeywordtype, searchKeyword, itemsCountInAPage, page, limitForm, limitTake);
+
+		return articleDao.getForPrintArticles(boardId, searchKeywordTypeCode, searchKeyword, limitFrom, limitTake);
 	}
 
+	public Article getForPrintArticleById(int id) {
+		return articleDao.getForPrintArticleById(id);
+	}
 }
