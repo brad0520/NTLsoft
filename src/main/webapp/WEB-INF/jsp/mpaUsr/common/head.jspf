@@ -83,8 +83,8 @@
 				<!-- SIGN GROUP -->
 				<div class="sign-group float--right toggle">
 					<div class="btn-group">
-						<a href="#" class="btn sign-in">Log in</a> <a href="#"
-							class="btn sign-in">Sign up</a>
+						<a href="/mpaUsr/member/login" class="btn sign-in">Log in</a> 
+						<a href="/mpaUsr/member/join"	class="btn sign-in">Sign up</a>
 					</div>
 				</div>
 
