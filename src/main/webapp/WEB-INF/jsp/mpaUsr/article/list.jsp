@@ -3,35 +3,44 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <c:set var="pageTitle"
-	value="<span><i class='far fa-clipboard'></i></span> <span>${board.name} ARTICLE LIST</span>" />
+	value="<span><i class='far fa-clipboard'></i></span> <span>${board.name}</span>" />
 
 <%@ include file="../common/head.jspf"%>
+<!-- Board Info Start-->
+<section class="board board-info" style='background-image: url("/img/board_info_bg${board.id}.jpg");'>
+	<div class="container">
+		<div class="info">
+			<h2 class="info__title">${board.name}</h2>
+		</div>
+	</div>
+</section>
+<!-- Board Info End-->
 
+<!-- List Start-->
 <div class="section section-article-list">
 	<div class="container mx-auto">
-		<div class="total-items">
-			<span>TOTAL ITEMS : </span>
-			<span>${totalItemsCount}</span>
+		<div class="wrapper">
+			<div class="total-items">
+				<span>TOTAL ITEMS : </span>
+				<span>${totalItemsCount}</span>
+			</div>
+			<div class="total-pages">
+				<span>TOTAL PAGES : </span>
+				<span>${totalPage}</span>
+			</div>
+			<div class="page">
+				<span>CURRENT PAGE : </span>
+				<span>${page}</span>
+			</div>
+			<div class="box"></div>
+			<div class="plain-link-wrap gap-3 mt-4">
+	            <a href="write?boardId=${board.id}" class="plain-link">
+	                <span><i class="fas fa-edit"></i></span>
+	                <span>글 작성</span>
+	            </a>
+	        </div>
 		</div>
 
-		<div class="total-pages">
-			<span>TOTAL PAGES : </span>
-			<span>${totalPage}</span>
-		</div>
-
-		<div class="page">
-			<span>CURRENT PAGE : </span>
-			<span>${page}</span>
-		</div>
-
-		<hr />
-		<div class="plain-link-wrap gap-3 mt-4">
-            <a href="write?boardId=${board.id}" class="plain-link">
-                <span><i class="fas fa-edit"></i></span>
-                <span>글 작성</span>
-            </a>
-        </div>
-		<hr />
 
 		<div class="search-form-box mt-2 px-4">
 			<form action="" class="grid gap-2">
@@ -127,5 +136,6 @@
 		</div>
 	</div>
 </div>
+<!-- List End-->
 
 <%@ include file="../common/foot.jspf"%>
