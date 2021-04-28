@@ -399,76 +399,46 @@ header .btn-group .sign-in:hover {
   box-sizing: border-box;
 }
 
-/* PRICING CARD */
-.section--pricing {
-  background: linear-gradient(#f5f5f5, #fff);
-}
-.section--pricing .container {
-  padding: 40px 80px;
-}
-.section--pricing .card {
-  display: flex;
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-.section--pricing .card .cell {
-  padding: 24px;
+
+/* FOOTER */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.section--pricing .card .cell1 .btn {
-  height: 50px;
-  font-size: 16px;
-}
-.section--pricing .card .cell2 {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.5;
-  flex: 1;
-  border-left: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+  margin-bottom: 50px;
 }
 
-/* FOOTER */
-footer .container {
-  padding: 40px 80px;
-  border-top: 1px solid #eee;
+.footer__container {
+  height: auto;
+  color: var(--dark_gray);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2%;
 }
-footer .site-links {
-  display: flex;
+
+.footer__item {
+  text-align: left;
+  position: relative;
 }
-footer .site-links li {
-  font-size: 14px;
-  margin-right: 10px;
-  color: #767676;
-}
-footer .site-links li a {
-  color: #767676;
-}
-footer .site-links li a:hover {
-  text-decoration: underline;
-}
-footer .logo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: none;
-}
-footer .logo a {
-  background: url("/img/logo_black_gr.png");
-  width: 24px;
-  height: 24px;
+
+.footer__item h4 {
   display: block;
-  text-indent: -9999px;
-}
-footer .logo a:hover {
-  background: url("/img/logo_black.png");
+  color: var(--dark_gray);
+  box-sizing: border-box;
+  padding-bottom: 2%;
+  font-size: var(--footer_title_fontsize);
 }
 
+.footer__item li {
+  font-size: var(--footer_description_fontsize);
+  padding-top: 2%;
+  color: var(--light_gray);
+}
 
 
 /* LIST START */
@@ -518,21 +488,31 @@ footer .logo a:hover {
 .section-article-list > .mx-auto > .wrapper > .box {
 	flex-grow: 1;
 }
-
-
 .section-article-list > .mx-auto > .wrapper > div:not(last-child) {
 	margin-right: 2rem;
 }
 .section-article-list .articles span:not(last-child){
 	margin-right: 2rem;
 }
+.section-article-list .articles .flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
 .section-article-list .articles .box { 
 	flex-grow: 1;
+}
+.section-article-list .articles .flex > div {
+	margin-right: 0;
+	
+}
+.section-article-list .articles .flex > span:last-child {
+	margin-right: 0;
 }
 .text-red-500 {
 	color: red; 
 }
-
 
 
 

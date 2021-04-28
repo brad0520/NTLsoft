@@ -94,12 +94,15 @@
 			</c:if>
 			<c:forEach items="${articles}" var="article">
 				<div class="flex">
-					<a href="/mpaUsr/article/detail?id=${article.id}"><span>글번호 : ${article.id}</span>
-					<span>제목 : ${article.title}</span>
-					<span class="box"></span>					
-					<span>작성일 : ${article.regDate}</span>
-					<span>수정일 : ${article.updateDate}</span>
+					<a href="/mpaUsr/article/detail?id=${article.id}">
+						<span>글번호 : ${article.id}</span>
+						<span>제목 : ${article.title}</span>
 					</a>
+					<span class="box"></span>		
+					<div class="flex">		
+						<span>작성일 : ${article.regDate}</span>
+						<span>수정일 : ${article.updateDate}</span>
+					</div>
 				</div>
 				<hr />
 			</c:forEach>
@@ -108,7 +111,7 @@
 		<div class="pages mt-4 mb-4 text-center">
 			<c:set var="pageMenuArmSize" value="4" />
 			<c:set var="startPage"
-				value="${page - pageMenuArmSize >= 1  ? page - pageMenuArmSize : 1}" />
+				value="${page - pageMenuArmSize >= 1 ? page - pageMenuArmSize : 1}" />
 			<c:set var="endPage"
 				value="${page + pageMenuArmSize <= totalPage ? page + pageMenuArmSize : totalPage}" />
 

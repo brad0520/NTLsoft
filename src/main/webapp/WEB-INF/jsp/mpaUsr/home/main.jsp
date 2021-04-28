@@ -84,20 +84,5 @@
 	</div>
 </section>
 
-<!-- PRICING CARD -->
-<section class="section section--pricing">
-	<div class="container">
-		<div class="card">
-			<div class="cell cell1">
-				<a href="#" class="btn btn--primary">Sign up for NTL</a>
-			</div>
-			<div class="cell cell2">Public projects are always free. Work
-				together across unlimited private repositories for $7 / month.</div>
-		</div>
-	</div>
-</section>
-
-
-
 
 <%@ include file="../common/foot.jspf"%>

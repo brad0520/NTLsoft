@@ -2,31 +2,41 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!-- FOOTER -->
-<footer class="section">
-	<div class="container clearfix">
-
-		<ul class="site-links float--right">
-			<li><a href="#">Log in</a></li>
-			<li><a href="#">Sign up</a></li>
-		</ul>
-
-		<ul class="site-links float--left">
-			<li>© 2020 NTL, Inc.</li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Web Service</a></li>
-			<li><a href="#">Shopping Mall</a></li>
-			<li><a href="#">Notice</a></li>
-			<li><a href="#">Board</a></li>
-			<li><a href="#">QnA</a></li>
-		</ul>
-
-		<div class="logo">
-			<a href="#">NTLsoft</a>
-		</div>
-
-	</div>
-</footer>
+    <!-- FOOTER START-->
+    <section class="footer">
+      <div class="footer__container container">
+        <div class="footer__item company">
+          <h4>NTL Design</h4>
+          <ul>
+            <li>로고</li>
+          </ul>
+        </div>
+        <div class="footer__item information">
+          <h4>Information</h4>
+          <ul>
+            <li>상호명 : NTL Design</li>
+            <li>대표자명 : 박병규</li>
+            <li>주소 : 대전광역시 서구 문예로 16</li>
+            <li>대표전화 : 010-6589-5820</li>
+          </ul>
+        </div>
+        <div class="footer__item licence">
+          <h4>Licence</h4>
+          <ul>
+            <li>사업자번호 : 623-21-01243</li>
+            <li>통신판매신고번호 : 신고예정</li>
+          </ul>
+        </div>
+        <div class="footer__item contact">
+          <h4>Contacts</h4>
+          <ul>
+            <li>E-MAIL : ntldesign@gmail.com</li>
+            <li>Copyright(c) 2020 NTL Design All Rights Reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER END -->
 
 <!-- MAP SCRIPT -->
 <script>
