@@ -8,6 +8,17 @@
 <%@ include file="../common/head.jspf"%>
 
 <div class="section section-article-detail">
+
+	<!-- Detail Info Start-->
+	<section class="detail detail-info" style='background-image: url("/img/parallax_bg0.jpg");'>
+		<div class="container">
+			<div class="info">
+				<h2 class="info__title">${board.name}</h2>
+			</div>
+		</div>
+	</section>
+	<!-- Detail Info End-->
+
 	<div class="container mx-auto">
 	    <div class="card bordered shadow-lg item-bt-1-not-last-child">
             <div class="card-title">
