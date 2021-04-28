@@ -39,6 +39,7 @@
 	                <span>글 작성</span>
 	            </a>
 	        </div>
+
 		</div>
 
 
@@ -48,7 +49,7 @@
 
 				<div class="form-control">
 					<label class="label">
-						<span class="label-text">옵션</span>
+						<span class="label-text">선택</span>
 					</label>
 					<select class="select select-bordered" name="searchKeywordType">
 						<option value="titleAndBody">제목+내용</option>
@@ -64,10 +65,10 @@
 						}
 					</script>
 				</div>
-
+				
 				<div class="form-control">
 					<label class="label">
-						<span class="label-text">제목</span>
+						<span class="label-text">검색어</span>
 					</label>
 					<input value="${param.searchKeyword}" class="input input-bordered"
 						name="searchKeyword" type="text" placeholder="검색어를 입력해주세요."
@@ -76,27 +77,29 @@
 
 				<div class="form-control">
 					<label class="label">
-						<span class="label-text">검색</span>
+						<span class="label-text"></span>
 					</label>
-					<input type="submit" class="btn btn-sm btn-primary" value="검색" />
+					<input type="submit" class="" value="검색" />
 				</div>
+
+				<div class="box"></div>
+
 			</form>
 		</div>
 
 		<div class="articles mt-2">
+			<hr />
 			<c:if test="${articles == null || articles.size() == 0}">
 				검색결과가 존재하지 않습니다.
 			</c:if>
 			<c:forEach items="${articles}" var="article">
-				<div>
-					ID : ${article.id}
-					<br>
-					REG DATE : ${article.regDate}
-					<br>
-					UPDATE DATE : ${article.updateDate}
-					<br>
-					TITLE : ${article.title}
-					<br>
+				<div class="flex">
+					<a href="/mpaUsr/article/detail?id=${article.id}"><span>글번호 : ${article.id}</span>
+					<span>제목 : ${article.title}</span>
+					<span class="box"></span>					
+					<span>작성일 : ${article.regDate}</span>
+					<span>수정일 : ${article.updateDate}</span>
+					</a>
 				</div>
 				<hr />
 			</c:forEach>
