@@ -63,11 +63,11 @@ function MemberFindLoginId__submitForm(form) {
             </div>
 
             <div class="flex form-control mt-8 border-1">
-                <button type="submit" href="#" class="flex flex-grow flex-center border-main mr-4">
+                <a type="submit" href="../member/login" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>아이디 찾기</span>
-                </button>
+                </a>
 
                 <a href="../member/login" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
@@ -87,7 +87,7 @@ function MemberFindLoginId__submitForm(form) {
                     <span>비밀번호 찾기</span>
                 </a>
 
-                <a href="#" class="flex flex-grow flex-center border-2 ml-4">
+                <a href="../home/main" class="flex flex-grow flex-center border-2 ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>

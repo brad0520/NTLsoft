@@ -158,13 +158,13 @@ function MemberJoin__submitForm(form) {
             </div>
 
             <div class="flex form-control mt-8 border-1">
-                <button type="submit" class="border-main flex flex-grow flex-center mr-4">
+                <a type="submit" class="border-main flex flex-grow flex-center mr-4">
                     <span><i class="fas fa-user-plus"></i></span>
                     &nbsp;
                     <span>가입</span>
-                </button>
+                </a>
 			
-                <a href="#" class="border-2 flex flex-grow flex-center ml-4">
+                <a href="../home/main" class="border-2 flex flex-grow flex-center ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span class="class=border-2">홈</span>
