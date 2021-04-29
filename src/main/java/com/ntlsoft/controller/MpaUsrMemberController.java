@@ -7,17 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ntlsoft.controller.MpaUsrMemberController;
 import com.ntlsoft.dto.Member;
 import com.ntlsoft.dto.ResultData;
 import com.ntlsoft.dto.Rq;
 import com.ntlsoft.service.MemberService;
 import com.ntlsoft.util.Util;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Controller
-@Slf4j
 public class MpaUsrMemberController {
     @Autowired
     private MemberService memberService;

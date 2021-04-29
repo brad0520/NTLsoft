@@ -13,17 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.ntlsoft.dto.Article;
 import com.ntlsoft.dto.Board;
 import com.ntlsoft.dto.Member;
+import com.ntlsoft.dto.ResultData;
+import com.ntlsoft.dto.Rq;
 import com.ntlsoft.service.ArticleService;
 import com.ntlsoft.service.BoardService;
 import com.ntlsoft.util.Util;
-import com.ntlsoft.controller.MpaUsrArticleController;
-import com.ntlsoft.dto.ResultData;
-import com.ntlsoft.dto.Rq;
-
-import lombok.extern.slf4j.Slf4j;
 
 @Controller
-@Slf4j
 public class MpaUsrArticleController {
 
     @Autowired
