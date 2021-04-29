@@ -46,57 +46,65 @@ function MemberFindLoginPw__submitForm(form) {
 }
 </script>
 
-<div class="section section-find-login-pw px-2">
-	<div class="container mx-auto">
+<div class="section-member section-find-login-pw flex px-2">
+	<div class="container">
 	    <form method="POST" action="doFindLoginPw" onsubmit="MemberFindLoginPw__submitForm(this); return false;">
 	        <input type="hidden" name="redirectUri" value="${param.afterUri}" />
-	        <div class="form-control">
+	        
+			<div class="flex flex-center border-2 font-size-20">
+                <span class="py-8">
+                    비밀번호 찾기
+                </span>
+            </div>
+	        
+	        
+	        <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     로그인아이디
                 </label>
                 <input autofocus class="input input-bordered w-full" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
             </div>
 
-	        <div class="form-control">
+	        <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이름
                 </label>
                 <input class="input input-bordered w-full" type="text" maxlength="30" name="name" placeholder="이름을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이메일
                 </label>
                 <input class="input input-bordered w-full" type="email" maxlength="100" name="email" placeholder="이메일을 입력해주세요." />
             </div>
 
-            <div class="mt-4 btn-wrap gap-1">
-                <button type="submit" href="#" class="btn btn-primary btn-sm mb-1">
+            <div class="flex form-control mt-8 border-1">
+                <button type="submit" href="#" class="flex-grow border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>비빌번호 찾기</span>
                 </button>
 
-                <a href="../member/login" type="submit" href="#" class="btn btn-link btn-sm mb-1">
+                <a href="../member/login" type="submit" href="#" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>로그인</span>
                 </a>
 
-                <a href="../member/join" type="submit" href="#" class="btn btn-link btn-sm mb-1">
+                <a href="../member/join" type="submit" href="#" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>회원가입</span>
                 </a>
 
-                <a href="../member/findLoginId" type="submit" href="#" class="btn btn-link btn-sm mb-1">
+                <a href="../member/findLoginId" type="submit" href="#" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>아이디 찾기</span>
                 </a>
 
-                <a href="#" class="btn btn-link btn-sm mb-1">
+                <a href="#" class="flex-grow border-2 ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>

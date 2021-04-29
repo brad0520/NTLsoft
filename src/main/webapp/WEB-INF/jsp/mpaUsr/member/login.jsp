@@ -42,45 +42,53 @@ function MemberLogin__submitForm(form) {
 }
 </script>
 
-<div class="section flex section-login px-2">
-	<div class="container relative mx-auto">
+<div class="section-member section-login flex px-2">
+	<div class="container">
 	    <form method="POST" action="doLogin" onsubmit="MemberLogin__submitForm(this); return false;">
 	        <input type="hidden" name="redirectUri" value="${param.afterLoginUri}" />
 	        <input type="hidden" name="loginPw" />
+	        
+			<div class="flex flex-center border-2 font-size-20">
+                <span class="py-8">
+                	로그인
+                </span>
+               
+            </div>
+	        
 	        <div class="flex form-control mt-8 border-1">
                 <label class="label mr-20">
-                    로그인아이디
+                    아이디
                 </label>
-                <input class="input input-bordered w-full" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
+                <input type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
             </div>
 
             <div class="flex form-control mt-8 border-1">
                 <label class="label mr-20">
-                    로그인비밀번호
+                    비밀번호
                 </label>
                 <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
             </div>
 
             <div class="mt-8 flex">
-                <button type="submit" href="#" class="flex-grow border-1 mr-4">
+                <button type="submit" href="#" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>로그인</span>
                 </button>
 
-                <a href="../member/findLoginId" type="submit" href="#" class="flex-grow border-1 ml-4 mr-4">
+                <a href="../member/findLoginId" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>아이디 찾기</span>
                 </a>
 
-                <a href="../member/findLoginPw" type="submit" href="#" class="flex-grow border-1 ml-4 mr-4">
+                <a href="../member/findLoginPw" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>비밀번호 찾기</span>
                 </a>
 
-                <a href="#" class="flex-grow border-1 ml-4">
+                <a href="#" class="flex flex-grow flex-center border-2 ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>

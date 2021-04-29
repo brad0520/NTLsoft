@@ -51,24 +51,24 @@
                 <div class="flex-col mt-8">
 
                     <div class="article_info flex border-1">
-                        <div class="border-2">
+                        <div class="border-2 mr-4">
                             <span class="badge mr-20">번호</span>
                             <span>${article.id}</span>
                         </div>
 
-                        <div class="border-2">
+                        <div class="border-2 mr-4 ml-4">
                             <span class="badge mr-20">작성자</span>
                             <span>${article.extra__writerName}</span>
                         </div>
 
 	                    <div class="flex-grow"></div>
 
-                        <div class="border-2">
+                        <div class="border-2 mr-4 ml-4">
                             <span class="badge mr-20">등록날짜</span>
                             <span class="">${article.regDate}</span>
                         </div>
 
-                        <div class="border-2">
+                        <div class="border-2 ml-4">
                             <span class="badge mr-20">수정날짜</span>
                             <span class=" ">${article.updateDate}</span>
                         </div>

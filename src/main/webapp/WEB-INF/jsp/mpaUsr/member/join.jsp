@@ -96,70 +96,78 @@ function MemberJoin__submitForm(form) {
 }
 </script>
 
-<div class="section section-join px-2">
-	<div class="container mx-auto">
+<div class="section-member section-join flex px-2">
+	<div class="container">
 	    <form method="POST" action="doJoin" onsubmit="MemberJoin__submitForm(this); return false;">
 	        <input type="hidden" name="loginPw">
-	        <div class="form-control">
+	        
+    	        <div class="flex flex-center border-2 font-size-20">
+                <span class="py-8">
+                    회원가입
+                </span>
+               
+            </div>
+	        
+	        <div class="flex form-control mt-8 border-1">
                 <label class="label">
-                    로그인아이디
+                    아이디
                 </label>
-                <input class="input input-bordered w-full" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
+                <input class="" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
-                    로그인비밀번호
+                    비밀번호
                 </label>
-                <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
+                <input class="" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
-                    로그인비밀번호 확인
+                    비밀번호 확인
                 </label>
-                <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwConfirm" placeholder="로그인비밀번호 확인을 입력해주세요." />
+                <input class="" type="password" maxlength="30" name="loginPwConfirm" placeholder="로그인비밀번호 확인을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이름
                 </label>
-                <input class="input input-bordered w-full" type="text" maxlength="30" name="name" placeholder="이름을 입력해주세요." />
+                <input class="" type="text" maxlength="30" name="name" placeholder="이름을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     별명
                 </label>
-                <input class="input input-bordered w-full" type="text" maxlength="30" name="nickname" placeholder="별명을 입력해주세요." />
+                <input class="" type="text" maxlength="30" name="nickname" placeholder="별명을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     휴대전화번호
                 </label>
-                <input class="input input-bordered w-full" type="tel" maxlength="30" name="cellphoneNo" placeholder="휴대전화번호를 입력해주세요." />
+                <input class="" type="tel" maxlength="30" name="cellphoneNo" placeholder="휴대전화번호를 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이메일
                 </label>
-                <input class="input input-bordered w-full" type="email" maxlength="50" name="email" placeholder="이메일을 입력해주세요." />
+                <input class="" type="email" maxlength="50" name="email" placeholder="이메일을 입력해주세요." />
             </div>
 
-            <div class="mt-4 btn-wrap gap-1">
-                <button type="submit" href="#" class="btn btn-primary btn-sm mb-1">
+            <div class="flex form-control mt-8 border-1">
+                <button type="submit" class="border-main flex flex-grow flex-center mr-4">
                     <span><i class="fas fa-user-plus"></i></span>
                     &nbsp;
                     <span>가입</span>
                 </button>
-
-                <a href="#" class="btn btn-sm mb-1">
+			
+                <a href="#" class="border-2 flex flex-grow flex-center ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
-                    <span>홈</span>
+                    <span class="class=border-2">홈</span>
                 </a>
             </div>
 	    </form>

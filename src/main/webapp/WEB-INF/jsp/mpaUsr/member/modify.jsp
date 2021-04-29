@@ -81,14 +81,14 @@ function MemberModify__submitForm(form) {
 
     form.submit();
     MemberModify__submitFormDone = true;
-}
+
 </script>
 
-<div class="section section-member-modify px-2">
-	<div class="container mx-auto">
+<div class="section-member section-member-modify flex px-2">
+	<div class="container">
 	    <form method="POST" action="doModify" onsubmit="MemberModify__submitForm(this); return false;">
 	        <input type="hidden" name="loginPw">
-	        <div class="form-control">
+	        <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     로그인아이디
                 </label>
@@ -97,62 +97,62 @@ function MemberModify__submitForm(form) {
                 </div>
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     로그인비밀번호
                 </label>
                 <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     로그인비밀번호 확인
                 </label>
                 <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwConfirm" placeholder="로그인비밀번호 확인을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이름
                 </label>
                 <input value="${rq.loginedMember.name}" class="input input-bordered w-full" type="text" maxlength="30" name="name" placeholder="이름을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     별명
                 </label>
                 <input value="${rq.loginedMember.nickname}" class="input input-bordered w-full" type="text" maxlength="30" name="nickname" placeholder="별명을 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     휴대전화번호
                 </label>
                 <input value="${rq.loginedMember.cellphoneNo}" class="input input-bordered w-full" type="tel" maxlength="30" name="cellphoneNo" placeholder="휴대전화번호를 입력해주세요." />
             </div>
 
-            <div class="form-control">
+            <div class="flex form-control mt-8 border-1">
                 <label class="label">
                     이메일
                 </label>
                 <input value="${rq.loginedMember.email}" class="input input-bordered w-full" type="email" maxlength="50" name="email" placeholder="이메일을 입력해주세요." />
             </div>
 
-            <div class="mt-4 btn-wrap gap-1">
-                <button type="submit" href="#" class="btn btn-primary btn-sm mb-1">
+            <div class="mt-4 flex form-control mt-8 border-1 gap-1">
+                <button type="submit" href="#" class="flex-grow border-1 mr-4">
                     <span><i class="fas fa-user-plus"></i></span>
                     &nbsp;
                     <span>수정</span>
                 </button>
 
-                <a href="../member/mypage" class="btn btn-link btn-sm mb-1">
+                <a href="../member/mypage" class="flex-grow border-1 ml-4 mr-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>마이페이지</span>
                 </a>
 
-                <a href="/" class="btn btn-link btn-sm mb-1">
+                <a href="/" class="flex-grow border-1 ml-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>
