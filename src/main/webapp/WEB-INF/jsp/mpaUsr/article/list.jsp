@@ -33,8 +33,8 @@
 				<span>${page}</span>
 			</div>
 			<div class="box"></div>
-			<div class="plain-link-wrap gap-3 mt-4">
-	            <a href="write?boardId=${board.id}" class="plain-link">
+			<div class="write-btn">
+	            <a href="write?boardId=${board.id}" class="flex">
 	                <span><i class="fas fa-edit"></i></span>
 	                <span>글 작성</span>
 	            </a>
