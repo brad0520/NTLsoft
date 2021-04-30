@@ -33,7 +33,7 @@ function MemberCheckPassword__submitForm(form) {
 }
 </script>
 
-<div class="section section-login px-2">
+<div class="section-member section-login px-2">
 	<div class="container mx-auto">
 	    <form method="POST" action="doCheckPassword" onsubmit="MemberCheckPassword__submitForm(this); return false;">
 	        <input type="hidden" name="redirectUri" value="${param.afterUri}" />
@@ -53,7 +53,7 @@ function MemberCheckPassword__submitForm(form) {
                     <span>비밀번호 확인</span>
                 </button>
 
-                <a href="#" class="btn btn-link btn-sm mb-1">
+                <a href="../home/main" class="btn btn-link btn-sm mb-1">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>

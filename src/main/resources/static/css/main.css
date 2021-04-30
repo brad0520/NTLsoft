@@ -657,9 +657,9 @@ header .btn-group .sign-in:hover {
 	border: 1px solid rgba(0,0,0,0);
 	border-radius: 5px;
 }
-
-
-
+.section-member > .container > form button {
+	cursor: pointer;
+}
 
 
 

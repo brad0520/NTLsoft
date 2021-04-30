@@ -106,15 +106,15 @@ updateDate = NOW(),
 INSERT INTO board
 SET regDate = NOW(),
 updateDate = NOW(),
-`name` = 'FREE',
-`code` = 'free';
+`name` = 'Board',
+`code` = 'board';
 
 ## QNA 게시판 생성
 INSERT INTO board
 SET regDate = NOW(),
 updateDate = NOW(),
-`name` = 'QNA',
-`code` = 'QNA';
+`name` = 'QnA',
+`code` = 'qna';
 
 # 회원 테이블 생성
 CREATE TABLE `member` (

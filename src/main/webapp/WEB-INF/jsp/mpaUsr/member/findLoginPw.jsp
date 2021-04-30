@@ -80,25 +80,25 @@ function MemberFindLoginPw__submitForm(form) {
             </div>
 
             <div class="flex form-control mt-8 border-1">
-                <a type="submit" href="../member/login" class="flex-grow border-main mr-4">
+                <button type="submit" href="#" class="flex-grow border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>비빌번호 찾기</span>
-                </a>
+                </button>
 
-                <a href="../member/login" type="submit" href="#" class="flex-grow border-2 ml-4 mr-4">
+                <a href="../member/login" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>로그인</span>
                 </a>
 
-                <a href="../member/join" type="submit" class="flex-grow border-2 ml-4 mr-4">
+                <a href="../member/join" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>회원가입</span>
                 </a>
 
-                <a href="../member/findLoginId" type="submit" class="flex-grow border-2 ml-4 mr-4">
+                <a href="../member/findLoginId" class="flex-grow border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>아이디 찾기</span>

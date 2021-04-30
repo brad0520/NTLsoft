@@ -63,25 +63,25 @@ function MemberFindLoginId__submitForm(form) {
             </div>
 
             <div class="flex form-control mt-8 border-1">
-                <a type="submit" href="../member/login" class="flex flex-grow flex-center border-main mr-4">
+                <button type="submit" href="#" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>아이디 찾기</span>
-                </a>
+                </button>
 
-                <a href="../member/login" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
+                <a href="../member/login" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>로그인</span>
                 </a>
 
-                <a href="../member/join" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
+                <a href="../member/join" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>회원가입</span>
                 </a>
 
-                <a href="../member/findLoginPw" type="submit" href="#" class="flex flex-grow flex-center border-2 ml-4 mr-4">
+                <a href="../member/findLoginPw" class="flex flex-grow flex-center border-2 ml-4 mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>비밀번호 찾기</span>
