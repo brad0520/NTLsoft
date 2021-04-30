@@ -112,7 +112,7 @@ function MemberJoin__submitForm(form) {
                 <label class="label">
                     아이디
                 </label>
-                <input class="" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
+                <input autofocus class="" type="text" maxlength="30" name="loginId" placeholder="로그인아이디를 입력해주세요." />
             </div>
 
             <div class="flex form-control mt-8 border-1">

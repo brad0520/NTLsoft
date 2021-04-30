@@ -43,7 +43,7 @@ function MemberCheckPassword__submitForm(form) {
                 <label class="label">
                     비밀번호
                 </label>
-                <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
+                <input autofocus class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
             </div>
 
             <div class="mt-8 flex">

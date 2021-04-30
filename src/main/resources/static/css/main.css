@@ -670,7 +670,9 @@ header .btn-group .sign-in:hover {
 .section-member > .container > form button {
 	cursor: pointer;
 }
-
+.section-member > .container > form > div > .plain-text{
+	min-width: 70%;
+}
 
 /* MYPAGE */
 .grid {

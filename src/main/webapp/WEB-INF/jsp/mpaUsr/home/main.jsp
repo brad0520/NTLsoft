@@ -60,10 +60,7 @@
 
 		<div class="video">
 			<div class="video-ratio">
-				<iframe width="1003" title="video" height="564"
-					src="https://www.youtube.com/embed/afvT1c1ii0c"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/VfGW0Qiy2I0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
