@@ -37,32 +37,38 @@ function ArticleWrite__submitForm(form) {
 }
 </script>
 
-<div class="section section-article-write">
+<div class="section-member flex section-article-write">
 	<div class="container mx-auto">
 	    <form method="POST" action="doWrite" onsubmit="ArticleWrite__submitForm(this); return false;">
 	        <input type="hidden" name="boardId" value="${board.id}" />
-	        <div class="form-control">
-                <label class="label">
+	        
+   			<div class="flex flex-center border-2 font-size-20">
+                <span class="py-8">
+                	${board.name}
+                </span>
+            </div>
+	        <div class="flex form-control mt-8 border-1">
+                <label class="label mr-20">
                     제목
                 </label>
                 <input class="input input-bordered w-full" type="text" maxlength="100" name="title" placeholder="제목을 입력해주세요." />
             </div>
 
-            <div class="form-control">
-                <label class="label">
+	        <div class="flex form-control mt-8 border-1">
+                <label class="label mr-20">
                     내용
                 </label>
                 <textarea class="textarea textarea-bordered w-full h-24" placeholder="내용을 입력해주세요." name="body" maxlength="2000"></textarea>
             </div>
 
-            <div class="mt-4 btn-wrap gap-1">
-                <button type="submit" href="#" class="btn btn-primary btn-sm mb-1">
+            <div class="mt-8 flex">
+                <button type="submit" href="#" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-save"></i></span>
                     &nbsp;
                     <span>작성</span>
                 </button>
 
-                <a href="#" class="btn btn-sm mb-1" title="자세히 보기">
+                <a href="#" class="flex flex-grow flex-center border-2 ml-4" title="자세히 보기">
                     <span><i class="fas fa-list"></i></span>
                     &nbsp;
                     <span>리스트</span>

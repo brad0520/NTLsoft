@@ -4,7 +4,7 @@
 
     <!-- FOOTER START-->
     <section class="footer">
-      <div class="footer__container container">
+      <div class="footer__container container px-20">
         <div class="footer__item company">
           <h4>NTL Design</h4>
           <ul>

@@ -31,15 +31,15 @@
                 <h1 class="border-1">상세내용</h1>
                 <div class="border-1 mt-8">
 	                <div class="datial_info flex mt-8">
-	                    <span>
+	                    <span class="border-2 mr-8">
 	                        <span>Comments:</span>
 	                        <span class="">30</span>
 	                    </span>
-	                    <span>
+	                    <span class="border-2 mr-8">
 	                        <span>Views:</span>
 	                        <span class="">60k</span>
 	                    </span>
-	                    <span>
+	                    <span class="border-2 mr-8">
 	                        <span>Likes:</span>
 	                        <span class="">120k</span>
 	                    </span>
@@ -101,7 +101,7 @@
                 <form action="/" class="relative flex">
                     <input type="search" class="mr-20" placeholder="댓글을 입력해주세요." autocomplete="off">
                     <span>
-                        <button type="submit" class="">작성
+                        <button type="submit" class="border-2">작성
                         </button>
                     </span>
                 </form>

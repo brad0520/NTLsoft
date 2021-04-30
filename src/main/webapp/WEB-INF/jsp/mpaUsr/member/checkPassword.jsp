@@ -33,27 +33,27 @@ function MemberCheckPassword__submitForm(form) {
 }
 </script>
 
-<div class="section-member section-login px-2">
-	<div class="container mx-auto">
+<div class="section-member flex section-login px-2">
+	<div class="container">
 	    <form method="POST" action="doCheckPassword" onsubmit="MemberCheckPassword__submitForm(this); return false;">
 	        <input type="hidden" name="redirectUri" value="${param.afterUri}" />
 	        <input type="hidden" name="loginPw" />
 
-	        <div class="form-control">
+	        <div class="flex form-control mt-8 border-1">
                 <label class="label">
-                    로그인비밀번호
+                    비밀번호
                 </label>
                 <input class="input input-bordered w-full" type="password" maxlength="30" name="loginPwInput" placeholder="로그인비밀번호를 입력해주세요." />
             </div>
 
-            <div class="mt-4 btn-wrap gap-1">
-                <button type="submit" href="#" class="btn btn-primary btn-sm mb-1">
+            <div class="mt-8 flex">
+                <button type="submit" href="#" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-sign-in-alt"></i></span>
                     &nbsp;
                     <span>비밀번호 확인</span>
                 </button>
 
-                <a href="../home/main" class="btn btn-link btn-sm mb-1">
+                <a href="../home/main" class="flex flex-grow flex-center border-main mr-4">
                     <span><i class="fas fa-home"></i></span>
                     &nbsp;
                     <span>홈</span>

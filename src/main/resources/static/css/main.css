@@ -14,7 +14,9 @@ ul, li {
 	list-style: none;
 }
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
 	outline: 1px solid #e0e0e0;
 }
 .container {
@@ -64,6 +66,10 @@ input:active {
 .px-8 {
 	padding-left: 8px;
 	padding-right: 8px;
+}
+.px-20 {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .py-8 {
 	padding-top: 8px;
@@ -495,7 +501,9 @@ header .btn-group .sign-in:hover {
 .section-article-list {
 	padding: 2rem;
 }
-.section-article-list input {
+.section-article-list input, 
+.section-member input,
+.section-member textarea {
 	line-height: 30px;
 	display: block;
 	height: 30px;
@@ -580,6 +588,8 @@ header .btn-group .sign-in:hover {
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 25px
 		rgba(0, 0, 0, 0.75);
 }
+/* DETAIL END */
+
 .card-title {
 	font-size: 1.5rem;	
 	margin-bottom: 1rem;
@@ -662,7 +672,70 @@ header .btn-group .sign-in:hover {
 }
 
 
+/* MYPAGE */
+.grid {
+	display: grid;
+}
+.grid-cols-1 {
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.gap-3 {
+	gap: 0.75rem;
+}
+.order-1 {
+	order: 1;
+}	
+.order-2 {
+	order: 2;
+}	
+.order-3 {
+	order: 3;
+}	
+.order-4 {
+	order: 4;
+}	
+.order-5 {
+	order: 5;
+}	
+.order-6 {
+	order: 6;
+}	
+.order-7 {
+	order: 7;
+}	
+.order-8 {
+	order: 8;
+}	
+.order-9 {
+	order: 9;
+}	
+
+textarea {
+	width: 90%;
+	min-height: 200px;
+}
+/* WRITE */
+.section-article-write input {
+	width: 90%;
+}
 
 
 
-/* DETAIL END */
+
+
+
+
+
+
+
+
+

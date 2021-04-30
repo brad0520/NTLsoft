@@ -8,68 +8,70 @@
 
 <%@ include file="../common/head.jspf"%>
 
-<div class="section section-mypage px-2">
-    <div class="container mx-auto">
-        <div class="card bordered shadow-lg">
-            <!-- 회원 아이템, first -->
-            <div class="px-4 py-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    <a href="#" class="row-span-3 order-1">
-                        <img class="rounded-full" src="https://i.pravatar.cc/100?img=37" alt="">
-                    </a>
+<div class="section-member flex section-mypage px-2">
+    <div class="container">
+        <!-- 회원 아이템, first -->
+        <form class="px-4 py-8">
+			<div
+				class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
 
-                    <a href="#" class="order-2 hover:underline">
-                        <span class="badge badge-primary">번호</span>
-                        <span>${rq.loginedMember.id}</span>
-                    </a>
+				<div class="flex flex-center border-2 font-size-20">
+	                <span class="py-8">
+	                	마이페이지
+	                </span>
+	            </div>
 
-                    <a href="#" class="cursor-pointer order-3 hover:underline">
-                        <span class="badge badge-accent">회원타입</span>
-                        <span>${rq.loginedMember.authLevelName}</span>
-                    </a>
+				<div href="#" class="flex-left mt-8 border-1">
+					<img class="rounded-full" src="https://i.pravatar.cc/100?img=37"
+						alt="">
+				</div>
 
-                    <a href="#" class="order-4 hover:underline">
-                        <span class="badge">등록날짜</span>
-                        <span class="text-gray-600 text-light">${rq.loginedMember.regDate}</span>
-                    </a>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">번호</span> <span>${rq.loginedMember.id}</span>
+				</div>
 
-                    <a href="#" class="order-5 hover:underline">
-                        <span class="badge">수정날짜</span>
-                        <span class="text-gray-600 text-light">${rq.loginedMember.updateDate}</span>
-                    </a>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">회원타입</span> <span>${rq.loginedMember.authLevelName}</span>
+				</div>
 
-                    <a href="#" class="order-6 hover:underline">
-                        <span class="badge">로그인아이디</span>
-                        <span class="text-gray-600">${rq.loginedMember.loginId}</span>
-                    </a>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">등록날짜</span> <span
+						class="text-gray-600 text-light">${rq.loginedMember.regDate}</span>
+				</div>
 
-                    <a href="#" class="order-7 hover:underline">
-                        <span class="badge">이름</span>
-                        <span class="text-gray-600">${rq.loginedMember.name}</span>
-                    </a>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">수정날짜</span> <span
+						class="text-gray-600 text-light">${rq.loginedMember.updateDate}</span>
+				</div>
 
-                    <a href="#" class="order-8 sm:order-4 md:order-8 hover:underline">
-                        <span class="badge">별명</span>
-                        <span class="text-gray-600">${rq.loginedMember.nickname}</span>
-                    </a>
-                </div>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">로그인아이디</span> <span class="text-gray-600">${rq.loginedMember.loginId}</span>
+				</div>
 
-                <div class="grid grid-item-float gap-3 mt-4">
-                    <a href="../member/checkPassword?afterUri=${Util.getUriEncoded('../member/modify')}" class="text-blue-500 hover:underline">
-                        <span>
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">이름</span> <span class="text-gray-600">${rq.loginedMember.name}</span>
+				</div>
+
+				<div href="#" class="flex-left border-1">
+					<span class="mr-8">별명</span> <span class="text-gray-600">${rq.loginedMember.nickname}</span>
+				</div>
+			</div>
+
+			<div class="flex mt-8">
+                    <a href="../member/checkPassword?afterUri=${Util.getUriEncoded('../member/modify')}" class="flex mr-4">
+                        <span class="flex-center border-2">
                             <i class="fas fa-edit"></i>
                             <span>수정</span>
                         </span>
                     </a>
-                    <a onclick="if ( !confirm('삭제하시겠습니까?') ) return false;" href="#" class="text-blue-500 hover:underline">
-                        <span>
+                    <a onclick="if ( !confirm('삭제하시겠습니까?') ) return false;" href="#" class="flex-grow flex ml-4">
+                        <span class="flex-center border-2">
                             <i class="fas fa-trash"></i>
                             <span>탈퇴</span>
                         </span>
                     </a>
                 </div>
-            </div>
-        </div>
+            </form>
     </div>
 </div>
 
