@@ -44,7 +44,7 @@
 
 
 		<div class="search-form-box mt-2 px-4">
-			<form action="" class="grid gap-2">
+			<form action="" class="flex grid gap-2">
 				<input type="hidden" name="boardId" value="${board.id}" />
 
 				<div class="form-control">
@@ -82,7 +82,7 @@
 					<input type="submit" class="" value="검색" />
 				</div>
 
-				<div class="box"></div>
+				<div class="flex-grow box"></div>
 
 			</form>
 		</div>
